@@ -24,12 +24,12 @@ namespace TarefaApiIVS.Models
         
 
         [StringLength(1000,ErrorMessage ="A descrição não pode exeder 1000 caracteres.")]
-        public string? Descrição { get; set; }
+        public string? Descricao { get; set; }
        
         public bool Concluida { get; set; } = false;
         
         [Display(Name ="Data de Criação")]
-        public DateTime DataCriacao { get; set; } = DateTime.Now;
+        public DateTime DataCriacao { get; set; } = DateTime.Today;
         
 
         [Display(Name ="Data de Vencimento")]
@@ -39,6 +39,7 @@ namespace TarefaApiIVS.Models
         [Required(ErrorMessage ="Selecione uma categoria.")]
         [StringLength(50)]
         public string? Categoria { get; set; }
+
 
         [Required(ErrorMessage = "Selecione uma prioridade.")]
         public Prioridade Prioridade { get; set; } = Prioridade.Media;

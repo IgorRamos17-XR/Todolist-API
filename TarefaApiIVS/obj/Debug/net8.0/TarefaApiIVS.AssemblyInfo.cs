@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TarefaApiIVS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ff65cf46da255671776202150d40acd02134d03")]
 [assembly: System.Reflection.AssemblyProductAttribute("TarefaApiIVS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TarefaApiIVS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

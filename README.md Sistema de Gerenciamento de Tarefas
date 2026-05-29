@@ -1,0 +1,99 @@
+Aplicação Full Stack para gerenciamento de tarefas desenvolvida com ASP.NET Core, MySQL e JavaScript.
+
+Principais Recursos
+
+- Cadastro de tarefas
+- Edição e exclusão
+- Controle de prioridades
+- Controle de status
+- Data de vencimento
+- Integração Front-End ↔ Back-End
+- Validação de dados
+- API documentada com Swagger
+
+  Tecnologias Utilizadas.
+
+- ASP.NET Core 8
+- Entity Framework Core
+- MySQL
+- Swagger
+
+Estrutura do Projeto
+
+  Backend/
+
+├── Controllers/
+├── Models/
+├── Data/
+├── Migrations/
+├── Program.cs
+└── appsettings.json
+
+   Funcionalidades
+
+- CRUD completo de tarefas
+- Separação entre tarefas pendentes e concluídas
+- Modal de edição com Bootstrap
+- Sistema de prioridades
+- Data de vencimento
+- Comunicação Front-End ↔ API
+- Validação de dados
+
+  Essa parte é para criação do projeto la no seu Visual Studio
+  
+  - Você selecionara na criação do seu novo projeto o modelo : ASP.NET Core Web API
+  - Escolha o nome adequado
+  - Na próxima pagina o Framework: Selecione .NET 8.0 (Suporte de longo prazo)
+  - Habilitar Docker: Desmarcado
+  - E deixe as outras configurações padrão.
+    
+    O Visual Studio criará o projeto com uma estrutura básica, incluindo um WeatherForecastController de exemplo.
+    
+  - Delete o arquivo WeatherForecast.cs (se existir na raiz do projeto).
+  - Delete o arquivo WeatherForecastController.cs da pasta Controllers.
+  - Clique com o botão direito sobre o arquivo e selecione Excluir.
+
+            Passo a Passo Modelando a Entidade 
+
+  - No seu Gerenciador de Soluções, clique com o botão direito na pasta do projeto ex:(TarefasApiVS), Selecione Adicionar > Nova Pasta. Nomeie a pasta como Models.
+  - Clique com o botão direito na pasta Models e selecione Adicionar > Classe
+  - Nomeie o arquivo como Tarefa.cs e clique em Adicionar.
+  - Substitua o conteúdo do arquivo Tarefa.cs pelo que está aqui no projeto:
+ 
+    Instalando Pacotes NuGet para Entity Framework Core e MySQL
+
+  - Agora você ira instalar os pacotes la no Gerenciador de Pacotes Nuget
+  - Na Aba Procurar pesquise e instale os seguintes pacotes
+  - Microsoft.EntityFrameworkCore
+  - Microsoft.EntityFrameworkCore.Tools (para migrations)
+  - Pomelo.EntityFrameworkCore.MySql (o provedor MySQL para EF Core)
+  - Para funcionar legal instale a versão 8.0, em todos os pacotes isso ira garantir uma melhor comunicação entre eles,
+  - e depois de instalados não atualize para outra versão, e caso comece um novo projeto sempre terá que reinstalar os pacotes.
+
+    Criando o Contexto do Banco de Dados
+    
+  - Ira criar uma pasta com o nome Data e depois uma classe com nome ex: (TarefaContext.cs).
+  - Substitua pelo que esta na pasta desse Data de desse projeto.
+
+    Configurando a String de Conexão com o MySQL
+
+  - No arquivo appsettings.json, lembre-se de ajustar de acordo com seu banco de dados, substituir pela senha que você definiu para o usuário root do MySQL.
+
+    Registrando o DbContext e Configurando CORS em Program.cs
+
+  - Abra o arquivo Program.cs e modifique-o para registrar o TarefaContext 
+  - Configurar o CORS (Cross-Origin Resource Sharing) para permitir que nosso cliente web acesse a API.
+
+    Criando as Migrations e Atualizando o Banco de Dados
+
+  - No Visual Studio, vá em Exibir > Outras Janelas > Console do Gerenciador de Pacotes.
+  - Você ira executar os seguintes comandos:
+  - Add-Migration InitialCreateVS, criará uma pasta Migrations no seu projeto com os arquivos da migration.
+  - Update-Database, criará o banco de dados MinhaApiTarefasVSDB (se não existir) e a tabela Tarefas.
+
+    Criando o TarefasController
+
+  - Crie no seu projeto a pasta Controller, depois adicione um Controlador de API - Vazio, na janela “Adicionar Novo Item Scaffolded”.
+  - Nomeie o controlador como TarefasController.cs e clique em Adicionar.
+  - Substitua o conteúdo do TarefasController.cs pelo código do projeto, e certifique-se de que os namespaces estejam corretos.
+    

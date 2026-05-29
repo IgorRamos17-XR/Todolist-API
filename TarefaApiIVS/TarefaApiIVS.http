@@ -1,6 +1,0 @@
-@TarefaApiIVS_HostAddress = http://localhost:5052
-
-GET {{TarefaApiIVS_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

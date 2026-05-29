@@ -13,10 +13,20 @@ Principais Recursos
 
   Tecnologias Utilizadas.
 
+Backend
+
 - ASP.NET Core 8
 - Entity Framework Core
 - MySQL
 - Swagger
+
+Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Fetch API
 
 Estrutura do Projeto
 
@@ -29,7 +39,17 @@ Estrutura do Projeto
 ├── Program.cs
 └── appsettings.json
 
-   Funcionalidades
+Frontend
+
+├── index.html
+├── style.css
+└── app.js
+
+Como Executar o Projeto
+
+Clonando o Repositório : git clone URL_DO_REPOSITORIO
+
+Funcionalidades
 
 - CRUD completo de tarefas
 - Separação entre tarefas pendentes e concluídas
@@ -96,4 +116,9 @@ Estrutura do Projeto
   - Crie no seu projeto a pasta Controller, depois adicione um Controlador de API - Vazio, na janela “Adicionar Novo Item Scaffolded”.
   - Nomeie o controlador como TarefasController.cs e clique em Adicionar.
   - Substitua o conteúdo do TarefasController.cs pelo código do projeto, e certifique-se de que os namespaces estejam corretos.
-    
+
+
+Autor
+
+Desenvolvido por Igor Ramos.
+
